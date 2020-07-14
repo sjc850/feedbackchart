@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FB Data</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head> 
+<body>
+    <div class="container" >
+        <canvas id="myChart"></canvas>
+        <canvas id="myChart2"></canvas>
+        <canvas id="myChart3"></canvas>
+    </div>
+
+    <script>
+        var myChart = document.getElementById('myChart').getContext('2d'); 
+
+        //global options
+        Chart.defaults.global.defaultFontFamily = 'Lato';
+        Chart.defaults.global.defaultFontSize = 18;
+        Chart.defaults.global.defaultFontColor = '#EEEEEE';
+
+        var feedbackChart = new Chart(myChart, {
+            type: 'line', //bar, horizontal, pie, line, doughnut, radar, polarArea
+            data: {
+                labels:[
+                    'zoom', 
+                    'integration-suggestion', 
+                    'csp-options', 
+                    'sqsp-commerce', 
+                    'plan-confusion',
+                    'covid-GF', 
+                    'multiple-types', 
+                    'syncing-general', 
+                    'subscriptions', 
+                    'processor-suggestion'],
+                datasets:[{
+                    label:'',
+                    data:[
+                        55,
+                        22,
+                        13,
+                        12,
+                        11,
+                        10,
+                        9,
+                        9,
+                        8,
+                        7
+                    ],
+                    backgroundColor:[
+                        'rgba(207, 204, 204)',
+                        'rgba(181, 174, 174)',
+                        'rgba(155, 155, 155)',
+                        'rgba(167, 154, 154 )',
+                        'rgba(102, 100, 100 )',
+                        'rgba(84, 79, 79 )',
+                        'rgba(56, 72, 80)',
+                        'rgba(140, 136, 141)',
+                        'rgba(202, 197, 202)',
+                        'rgba(200, 202, 197)'
+                    ],
+                    borderWidth:1,
+                    borderColor: '#777',
+                    hoverBorderWidth: 3,
+                    hoverBorderColor:'#000'
+                }]
+            },
+            options:{
+                title:{
+                    display:false,
+                    text:'Top Feedback Trends From The Past Week',
+                    fontSize:30 
+                },
+                legend:{
+                    position:'right',
+                    align: 'center',
+                   // display:false,
+                },
+                
+            },
+        });
+    </script>
+
+<script>
+    var myChart2 = document.getElementById('myChart2').getContext('2d'); 
+
+    //global options
+    Chart.defaults.global.defaultFontFamily = 'Lato';
+    Chart.defaults.global.defaultFontSize = 18;
+    Chart.defaults.global.defaultFontColor = '#EEEEEE';
+
+    var feedbackChart = new Chart(myChart2, {
+        type: 'bar', //bar, horizontal, pie, line, doughnut, radar, polarArea
+        data: {
+            labels:[
+                'zoom', 
+                'integration-suggestion', 
+                'csp-options', 
+                'sqsp-commerce', 
+                'plan-confusion',
+                'covid-GF', 
+                'multiple-types', 
+                'syncing-general', 
+                'subscriptions', 
+                'processor-suggestion'],
+            datasets:[{
+                label: 'Feedback For The Week',
+                data:[
+                    55,
+                    22,
+                    13,
+                    12,
+                    11,
+                    10,
+                    9,
+                    9,
+                    8,
+                    7
+                ],
+                backgroundColor:[
+                    'rgba(207, 204, 204)',
+                    'rgba(181, 174, 174)',
+                    'rgba(155, 155, 155)',
+                    'rgba(167, 154, 154 )',
+                    'rgba(102, 100, 100 )',
+                    'rgba(84, 79, 79 )',
+                    'rgba(56, 72, 80)',
+                    'rgba(140, 136, 141)',
+                    'rgba(202, 197, 202)',
+                    'rgba(200, 202, 197)'
+                ],
+                borderWidth:1,
+                borderColor: '#777',
+                hoverBorderWidth: 3,
+                hoverBorderColor:'#000'
+            }]
+        },
+        options:{
+            title:{
+                display:false,
+                text:'Top Feedback Trends From The Past Week',
+                fontSize:30 
+            },
+            legend:{
+                position:'right',
+                align: 'center',
+               // display:false,
+            },
+            
+        },
+    });
+</script>
+
+<script>
+    var myChart3 = document.getElementById('myChart3').getContext('2d'); 
+
+    //global options
+    Chart.defaults.global.defaultFontFamily = 'Lato';
+    Chart.defaults.global.defaultFontSize = 18;
+    Chart.defaults.global.defaultFontColor = '#EEEEEE';
+
+    var feedbackChart = new Chart(myChart3, {
+        type: 'doughnut', //bar, horizontal, pie, line, doughnut, radar, polarArea
+        data: {
+            labels:[
+                'zoom', 
+                'integration-suggestion', 
+                'csp-options', 
+                'sqsp-commerce', 
+                'plan-confusion',
+                'covid-GF', 
+                'multiple-types', 
+                'syncing-general', 
+                'subscriptions', 
+                'processor-suggestion'],
+            datasets:[{
+                label: 'Feedback For The Week',
+                data:[
+                    55,
+                    22,
+                    13,
+                    12,
+                    11,
+                    10,
+                    9,
+                    9,
+                    8,
+                    7
+                ],
+                backgroundColor:[
+                    'rgba(207, 204, 204)',
+                    'rgba(181, 174, 174)',
+                    'rgba(155, 155, 155)',
+                    'rgba(167, 154, 154 )',
+                    'rgba(102, 100, 100 )',
+                    'rgba(84, 79, 79 )',
+                    'rgba(56, 72, 80)',
+                    'rgba(140, 136, 141)',
+                    'rgba(202, 197, 202)',
+                    'rgba(200, 202, 197)'
+                ],
+                borderWidth:1,
+                borderColor: '#777',
+                hoverBorderWidth: 3,
+                hoverBorderColor:'#000'
+            }]
+        },
+        options:{
+            title:{
+                display:false,
+                text:'Top Feedback Trends From The Past Week',
+                fontSize:30 
+            },
+            legend:{
+                position:'right',
+                align: 'center',
+               display:false,
+            },
+            
+        },
+    });
+</script>
+
+
+
+</body>
+</html>

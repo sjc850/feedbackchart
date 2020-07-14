@@ -1,0 +1,28 @@
+body {
+    background-color: black !important;
+}
+
+
+#myChart {
+    height: 400px !important;
+    width: 600px !important;
+    padding: 0;
+    margin: 0;
+}
+
+#myChart2 {
+    height: 400px !important;
+    width: 600px !important;
+   
+    padding: 0;
+    margin: 0;
+}
+
+#myChart3 {
+    position: absolute;
+    top:200px !important;
+    left:800px !important;
+    height: 400px !important;
+    width: 600px !important;
+
+}
